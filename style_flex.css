@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:'white';
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    height: 100vh;
+    width: 100%;
+    direction: ltr;
+}
+
+.block {
+    background-color: white;
+    border: 2px solid red;
+}
+
+/* Desktop Layout (width > 750px) */
+@media (min-width: 751px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .block-1 {
+        width: 20%;
+        height: 100%;
+    }
+
+    .right-section {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        gap: 10px;
+    }
+
+    .row-1 {
+        display: flex;
+        gap: 10px;
+        height: 33.30%;
+    }
+
+    .row-1 .block {
+        width: 23%;
+        height: 90%;
+    }
+
+    .row-2 {
+        display: flex;
+        gap: 10px;
+        height: 33.30%;
+        padding-bottom: 10px;
+    }
+
+    .row-2-left {
+        display: flex;
+        flex-direction: column;
+        width: 37%;
+        gap: 10px;
+    }
+
+    .row-2-left .block {
+        width: 100%;
+        flex: 1;
+    }
+
+    .block-8 {
+        width: 57%;
+        height: 98%;
+    }
+
+    .row-3 {
+        display: flex;
+        gap: 10px;
+        height: 33.30%;
+    }
+
+    .block-9 {
+        width: 62%;
+        height: 98%;
+    }
+
+    .block-10 {
+        width: 32%;
+        height: 98%;
+    }
+}
+
+/* Mobile Layout (max-width: 750px) */
+@media (max-width: 750px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .block {
+        width: 100%;
+        min-height: 33vh;
+    }
+
+    .right-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .row-1,
+    .row-2,
+    .row-3 {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .row-2-left {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .row-2-left .block,
+    .row-1 .block {
+        width: 100%;
+        min-height: 33vh;
+    }
+}
